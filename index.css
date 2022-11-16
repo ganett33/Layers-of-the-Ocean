@@ -117,16 +117,12 @@ body {
 }
 .container-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   flex-basis: 50%;
   align-items: center;
   margin-bottom: 20px;
   position: relative;
   min-width: 0;
-}
-
-.flip {
-  flex-direction: column-reverse;
 }
 
 .card {
@@ -186,12 +182,12 @@ body {
   margin-top: 20px;
 }
 
-.container-card.type_small .card-image {
+.container-card.image_small .card-image {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 150px;
   margin: 0 40px;
   transform: translateY(-30%);
 }
@@ -228,11 +224,11 @@ body {
   .card p {
     font-size: 1rem;
   }
-  .container-card.type_small .card-image {
+  .container-card.image_small .card-image {
     left: auto;
     right: 0;
-    height: 90px;
-    transform: translateY(-10%);
+    height: 95px;
+    transform: translateY(-20%);
   }
 }
 
@@ -242,12 +238,6 @@ body {
   }
   .item-subtitle {
     font-size: 1rem;
-  }
-
-  .container-card.type_small .card-image {
-    left: auto;
-    right: 0;
-    height: 70px;
   }
 
   .image_medium {
