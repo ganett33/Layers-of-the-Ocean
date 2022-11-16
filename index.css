@@ -250,8 +250,13 @@ body {
     height: 70px;
   }
 
+  .image_medium {
+    max-width: 150px;
+    margin-inline: auto;
+  }
+
   .image_large {
-    max-width: 180px;
+    max-width: 250px;
   }
   .card {
     padding: 20px;
