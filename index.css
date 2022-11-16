@@ -1,0 +1,265 @@
+/*
+  Resets
+*/
+
+body,
+ol {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-size: inherit; /* flexible with font-size */
+  font-weight: inherit;
+}
+li {
+  list-style-type: none;
+  text-align: start;
+}
+/*
+  CSS variables
+*/
+:root {
+  --gap: 100px;
+  --color-accent: #004eb9;
+  --border-width: 5px;
+}
+
+/*
+  Typo
+*/
+:root {
+  line-height: 1.7;
+}
+
+/*
+  Layouts
+*/
+.l_wrapper {
+  max-width: 1280px;
+  margin: 0 auto; /* center */
+  padding: 0 20px;
+}
+
+/*
+  Components
+*/
+body {
+  color: white;
+}
+.sea {
+  background-image: linear-gradient(
+    to top,
+    #121315,
+    #00122e,
+    #01214b,
+    #002659,
+    #003a88,
+    #004eb9,
+    #63b2da
+  );
+
+  min-height: 100vh;
+}
+
+.sea-title {
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.sea-contents {
+  padding: var(--gap) 0;
+}
+
+.chart {
+  position: relative;
+}
+
+.chart::before {
+  content: '';
+  background-image: linear-gradient(to bottom, #002659, #003a88, #004eb9);
+  position: absolute;
+  left: 50%;
+  top: calc(-1 * var(--gap)); /* -100 */
+  bottom: calc(-1 * 200px);
+  width: var(--border-width);
+  transform: translateX(-50%);
+}
+
+.chart-item {
+  margin-bottom: var(--gap);
+}
+
+.chart-item + .chart-item {
+  margin-top: var(--gap);
+}
+.chart-item:nth-child(odd) {
+  direction: ltr;
+}
+.chart-item:nth-child(even) {
+  direction: rtl;
+  text-align: left;
+}
+
+.item-container {
+  display: flex;
+  box-sizing: border-box;
+}
+.container-card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  min-width: 0;
+}
+
+.flip {
+  flex-direction: column-reverse;
+}
+
+.card {
+  padding: 30px;
+  margin: 20px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.8);
+}
+.card h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card li {
+  opacity: 0.6;
+}
+
+.item-subtitle {
+  display: flex;
+  gap: 10px;
+  font-size: 1.5rem;
+  justify-items: start;
+  align-items: center;
+  padding: 100px 0;
+  z-index: 1000;
+}
+
+.item-subtitle::before {
+  content: '';
+  backdrop-filter: blur(10px);
+  width: 2rem;
+  height: 2rem;
+  box-sizing: border-box; /* (border value - help to adjust mark position */
+  border-radius: 50%;
+  margin-inline-start: -1rem; /* position for the mark */
+  border: var(--border-width) solid var(--color-accent);
+  z-index: 1000;
+}
+
+.card-image {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.image_medium {
+  max-width: 350px;
+  margin-inline: auto;
+}
+
+.image_large {
+  max-width: 500px;
+  margin-inline: auto;
+}
+.card-title + .card-title {
+  margin-top: 20px;
+}
+
+.container-card.type_small .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  margin: 0 40px;
+  transform: translateY(-30%);
+}
+
+@media (max-width: 720px) {
+  .sea-title {
+    font-size: 1.7rem;
+  }
+  .chart-item:nth-child(even) {
+    direction: ltr;
+  }
+  .chart::before {
+    left: 0;
+  }
+
+  .item-container {
+    flex-direction: column-reverse;
+  }
+
+  .chart-item {
+    display: block;
+  }
+
+  .item-subtitle {
+    padding: 10px 0;
+  }
+
+  .card {
+    padding: 25px;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+  .container-card.type_small .card-image {
+    left: auto;
+    right: 0;
+    height: 90px;
+    transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 540px) {
+  .sea-title {
+    font-size: 1.7rem;
+  }
+  .item-subtitle {
+    font-size: 1rem;
+  }
+
+  .container-card.type_small .card-image {
+    left: auto;
+    right: 0;
+    height: 70px;
+  }
+
+  .image_large {
+    max-width: 180px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+}
