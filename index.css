@@ -190,6 +190,7 @@ body {
   height: 150px;
   margin: 0 40px;
   transform: translateY(-30%);
+  z-index: 0;
 }
 
 @media (max-width: 720px) {
