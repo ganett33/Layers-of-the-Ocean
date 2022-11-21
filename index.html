@@ -6,11 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Distribution of fish species by depth</title>
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/hero.css" />
+    <script src="./script.js" defer></script>
   </head>
   <!-- Source from https://www.sciencefacts.net/layers-of-the-ocean.html -->
   <body>
+    <header>
+      <a href="#" class="logo">The layers series</a>
+      <ul>
+        <li><a class="active">Home</a></li>
+        <li><a>Ocean</a></li>
+        <li><a>????</a></li>
+        <li><a>????</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </header>
+    <section class="hero">
+      <img src="/images/sky.png" id="sky" alt="" />
+      <img src="/images/islands.png" id="islands" alt="" />
+      <h2 id="text">Ocean</h2>
+      <a href="#" id="btn">Explore</a>
+      <img src="/images/sea.png" id="sea" alt="" />
+    </section>
     <section class="sea">
-      <h1 class="sea-title">Layers of the Ocean</h1>
+      <!-- <h1 class="sea-title">Layers of the Ocean</h1> -->
       <main class="sea-contents">
         <div class="l_wrapper">
           <ol class="chart">
@@ -287,7 +306,7 @@
                     src="/images/wolf-eel.png"
                   />
                 </div>
-                <h2 class="item-subtitle">
+                <h2 id="1000m" class="item-subtitle">
                   1000 m <br />
                   Mesopelagic (Twilight) Zone
                 </h2>
