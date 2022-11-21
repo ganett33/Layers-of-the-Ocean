@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -60,6 +61,7 @@ body {
   );
 
   min-height: 100vh;
+  z-index: 10000;
 }
 
 .sea-title {

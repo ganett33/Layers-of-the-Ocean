@@ -7,7 +7,7 @@ header {
   padding: 30px 100px;
   display: flex;
   justify-content: space-between;
-  z-index: 100000;
+  z-index: 1000;
 }
 
 header .logo {
@@ -33,6 +33,7 @@ header ul li a {
   padding: 6px 15px;
   color: black;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 header ul li a:hover,
@@ -42,7 +43,7 @@ header ul li a.active {
 }
 
 .hero {
-  background: linear-gradient(#5288ff, #57b0ff, #c0f4dd);
+  background: linear-gradient(to top, #57b0ff, #6dd0f3, #c0f4dd);
   min-height: 100vh;
   position: relative;
   width: 100%;
@@ -51,6 +52,7 @@ header ul li a.active {
   display: flex;
   justify-content: center;
   align-content: center;
+  overflow: hidden;
 }
 .hero::before {
   content: '';
@@ -58,8 +60,11 @@ header ul li a.active {
   bottom: 0;
   width: 0;
   height: 1000px;
-  background: linear-gradient(to top, #5288ff, transparent);
-  z-index: 1000;
+  background: linear-gradient(to bottom, #57b0ff, transparent);
+  z-index: 100;
+}
+.hero h2 {
+  color: #5288ff;
 }
 
 .hero img {
@@ -76,21 +81,21 @@ header ul li a.active {
   position: absolute;
   color: #fff;
   white-space: nowrap;
-  font-size: 6vw;
+  font-size: 7vw;
   font-weight: bolder;
   z-index: 10;
-  transform: translateY(50px);
+  transform: translateY(45px);
 }
 
 #btn {
   text-decoration: none;
   display: inline-block;
   height: fit-content;
-  padding: 8px 30px;
+  padding: 10px 35px;
   border-radius: 30px;
   background-color: #5288ff;
   color: #fff;
   font-size: 1.5em;
   z-index: 9;
-  transform: translateY(200px);
+  transform: translateY(210px);
 }
