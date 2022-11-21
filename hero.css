@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 header {
   background-color: transparent;
   position: absolute;
@@ -63,9 +65,6 @@ header ul li a.active {
   background: linear-gradient(to bottom, #57b0ff, transparent);
   z-index: 100;
 }
-.hero h2 {
-  color: #5288ff;
-}
 
 .hero img {
   position: absolute;
@@ -76,15 +75,19 @@ header ul li a.active {
   object-fit: cover;
   pointer-events: none;
 }
+.hero img#cloud {
+  mix-blend-mode: screen;
+}
 
 #text {
+  font-family: 'Rubik Bubbles', cursive;
   position: absolute;
-  color: #fff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5288ff;
   white-space: nowrap;
-  font-size: 7vw;
-  font-weight: bolder;
+  font-size: 8vw;
   z-index: 10;
-  transform: translateY(45px);
+  transform: translateY(30px);
 }
 
 #btn {
