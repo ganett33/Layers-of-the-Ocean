@@ -61,7 +61,7 @@ header ul li a.active {
   position: absolute;
   bottom: 0;
   width: 0;
-  height: 1000px;
+  height: 1200px;
   background: linear-gradient(to bottom, #57b0ff, transparent);
   z-index: 100;
 }
@@ -101,11 +101,4 @@ header ul li a.active {
   font-size: 1.5em;
   z-index: 9;
   transform: translateY(210px);
-}
-
-@media (max-width: 720px) {
-
-}
-
-@media (max-width: 540px) {
 }

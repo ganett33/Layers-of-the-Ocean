@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
   let value = window.scrollY;
 
   sky.style.top = value * 0.4 + 'px';
-  cloud.style.left = value * -0.5 + 'px';
+  cloud.style.top = value * -0.5 + 'px';
   islandsLeft.style.top = value * 0.4 + 'px';
   islandsRight.style.top = value * 0.4 + 'px';
   sea.style.top = value * 0.35 + 'px';
