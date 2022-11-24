@@ -50,18 +50,20 @@ header ul li a.active {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 300px;
+  padding: 200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   overflow: hidden;
 }
+
 .hero::before {
   content: '';
   position: absolute;
   bottom: 0;
   width: 0;
-  height: 1200px;
+  height: 1000px;
   background: linear-gradient(to bottom, #57b0ff, transparent);
   z-index: 100;
 }
@@ -82,23 +84,68 @@ header ul li a.active {
 #text {
   font-family: 'Rubik Bubbles', cursive;
   position: absolute;
+  padding: 50px 0;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #5288ff;
   white-space: nowrap;
-  font-size: 8vw;
+  font-size: 6rem;
   z-index: 10;
-  transform: translateY(30px);
 }
 
 #btn {
   text-decoration: none;
   display: inline-block;
   height: fit-content;
-  padding: 10px 35px;
+  padding: 10px 30px;
   border-radius: 30px;
   background-color: #5288ff;
   color: #fff;
-  font-size: 1.5em;
+
   z-index: 9;
-  transform: translateY(210px);
+  cursor: pointer;
+  transform: translateY(100px);
+  transition: all 0.5s ease-out;
+}
+
+#btn:hover {
+  background-color: #fff;
+  color: #5288ff;
+  border: #5288ff 1px solid;
+}
+
+@media (max-width: 720px) {
+  header ul {
+    display: none;
+  }
+  .hero {
+    padding: 100px;
+  }
+  .hero img#islandsRight {
+    display: none;
+  }
+  .hero img#islandsLeft {
+    width: 250%;
+  }
+
+  #text {
+    font-size: 5rem;
+  }
+  #btn {
+    font-size: 1.5rem;
+    padding: 7px 21px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero img#islandsLeft {
+    width: 300%;
+  }
+
+  #text {
+    font-size: 3.5rem;
+  }
+  #btn {
+    font-size: 1rem;
+    padding: 5px 15px;
+  }
 }
