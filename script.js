@@ -15,7 +15,7 @@ window.addEventListener('scroll', function () {
   islandsLeft.style.top = value * 0.4 + 'px';
   islandsRight.style.top = value * 0.4 + 'px';
   sea.style.top = value * 0.35 + 'px';
-  header.style.left = value * 0.4 + 'px';
+  header.style.top = value * 0.4 + 'px';
 
   cloud.style.marginTop = value * 1 + 'px';
   text.style.marginTop = value * 0.1 + 'px';
