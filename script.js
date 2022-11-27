@@ -7,6 +7,7 @@ let text = document.getElementById('text');
 let btn = document.getElementById('btn');
 let header = document.getElementById('header');
 
+// animation for hero
 window.addEventListener('scroll', function () {
   let value = window.scrollY;
 
@@ -21,3 +22,10 @@ window.addEventListener('scroll', function () {
   text.style.marginTop = value * 0.1 + 'px';
   btn.style.marginTop = value * 0.5 + 'px';
 });
+
+// remove active class in nav ul li
+const w = window.innerWidth;
+const activeClass = document.getElementById('active');
+if (w <= window.screen.width) {
+  activeClass.classList.remove('active');
+}

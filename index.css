@@ -61,7 +61,7 @@ body {
   );
 
   min-height: 100vh;
-  z-index: 10000;
+  z-index: 200;
 }
 
 .sea-title {
@@ -73,7 +73,7 @@ body {
   font-weight: bold;
   text-align: center;
   padding: 20px 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .sea-contents {
@@ -149,7 +149,7 @@ body {
   justify-items: start;
   align-items: center;
   padding: 100px 0;
-  z-index: 1000;
+  z-index: 50;
 }
 
 .item-subtitle::before {

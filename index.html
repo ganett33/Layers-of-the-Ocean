@@ -11,16 +11,21 @@
   </head>
   <!-- Source from https://www.sciencefacts.net/layers-of-the-ocean.html -->
   <body>
+    <!-- Navigation -->
     <header id="header">
-      <a href="#" class="logo">The layers series</a>
-      <ul>
-        <li><a class="active">Home</a></li>
-        <li><a>Ocean</a></li>
-        <li><a>????</a></li>
-        <li><a>????</a></li>
-        <li><a>Contact</a></li>
-      </ul>
+      <span href="#" class="logo">The layers series</span>
+      <input type="checkbox" id="navToggle" class="navToggle" />
+      <nav>
+        <ul>
+          <li><a class="active" id="active">Home</a></li>
+          <li><a>Ocean</a></li>
+          <li><a>Space</a></li>
+          <li><a class="btn">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="navToggle" class="navToggleLabel"><span></span></label>
     </header>
+
     <section class="hero">
       <img src="/images/sky.png" id="sky" alt="" />
       <img src="/images/cloud.png" id="cloud" alt="" />
