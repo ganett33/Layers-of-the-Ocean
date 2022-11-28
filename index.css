@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap');
+
 /*
   Resets
 */
@@ -161,7 +163,7 @@ body {
   border-radius: 50%;
   margin-inline-start: -1rem; /* position for the mark */
   border: var(--border-width) solid var(--color-accent);
-  z-index: 1000;
+  z-index: 200;
 }
 
 .card-image {
@@ -191,6 +193,18 @@ body {
   margin: 0 40px;
   transform: translateY(-30%);
   z-index: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.dots .read-more-btn,
+.read-more-btn {
+  font-family: 'Caveat', cursive;
+  color: #b9170e;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 720px) {

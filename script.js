@@ -29,3 +29,27 @@ const activeClass = document.getElementById('active');
 if (w <= window.screen.width) {
   activeClass.classList.remove('active');
 }
+
+// read more function
+const NUMCHAR = 500;
+const contents = document.querySelectorAll('.card-content');
+const readMoreBtn = document.querySelector('.read-more-btn');
+
+contents.forEach((content) => {
+  if (content.textContent.length < NUMCHAR) {
+    content.nextElementSibling.style.display = 'none';
+  } else {
+    let displayText = content.textContent.slice(0, NUMCHAR);
+    let moreText = content.textContent.slice(NUMCHAR);
+    content.innerHTML = `${displayText}<span class="dots">...</span><span class="hide more">${moreText}</span>`;
+  }
+});
+
+function readMore(btn) {
+  let card = btn.parentElement;
+  card.querySelector('.dots').classList.toggle('hide');
+  card.querySelector('.more').classList.toggle('hide');
+  btn.textContent == 'read more'
+    ? (btn.textContent = 'read less')
+    : (btn.textContent = 'read more');
+}
