@@ -46,3 +46,21 @@ function readMore(btn) {
     ? (btn.textContent = 'read less')
     : (btn.textContent = 'read more');
 }
+
+// Scroll to top
+const scrollBtn = document.querySelector('.scrollToTopBtn');
+const refreshBtnVisibility = () => {
+  if (document.documentElement.scrollTop <= 200) {
+    scrollBtn.style.display = 'none';
+  } else {
+    scrollBtn.style.display = 'block';
+  }
+};
+refreshBtnVisibility();
+scrollBtn.addEventListener('click', () => {
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0; // for safari browser
+});
+document.addEventListener('scroll', (e) => {
+  refreshBtnVisibility();
+});
