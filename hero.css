@@ -21,8 +21,8 @@ header {
   display: grid;
   grid-template-columns: 1fr auto;
   justify-content: center;
-  height: auto;
-  z-index: 100;
+  height: fit-content;
+  z-index: 30;
 }
 input#navToggle {
   display: none;
@@ -80,7 +80,6 @@ nav .btn:hover {
 /*################ Hero ################*/
 .hero {
   background: linear-gradient(to top, #57b0ff, #6dd0f3, #c0f4dd);
-  min-height: 100vh;
   position: relative;
   width: 100%;
   height: 110vh;
@@ -99,7 +98,7 @@ nav .btn:hover {
   width: 0;
   height: 1000px;
   background: linear-gradient(to bottom, #57b0ff, transparent);
-  /* z-index: 50; */
+  z-index: 30;
 }
 
 .hero img {
@@ -143,8 +142,9 @@ nav .btn:hover {
 
 #btn:hover {
   background-color: #fff;
+  font-weight: bolder;
   color: #5288ff;
-  border: #5288ff 1px solid;
+  border: 3px solid #5288ff;
 }
 
 @media (max-width: 1080px) {
@@ -173,8 +173,8 @@ nav .btn:hover {
     align-items: center;
     justify-content: space-between;
     top: 0;
-    z-index: 99;
-    height: 48px;
+    z-index: 100;
+    height: auto;
     width: 100%;
   }
   input#navToggle {
@@ -230,7 +230,6 @@ nav .btn:hover {
 
   nav {
     position: absolute;
-    z-index: -1;
     left: -110%;
     padding-top: 300px;
     transition: 0.22s ease-in-out;
@@ -240,7 +239,6 @@ nav .btn:hover {
     content: '';
     position: absolute;
     top: -1rem;
-    z-index: -1;
     height: 985vh;
     width: 100%;
     background-color: #57b0ff;
@@ -263,7 +261,7 @@ nav .btn:hover {
     padding: 1rem 1.5rem;
     color: #fff;
     border-bottom: solid 1px rgba(255, 255, 255, 0.5);
-    z-index: 30;
+    z-index: 130;
   }
 
   nav ul li a:hover {

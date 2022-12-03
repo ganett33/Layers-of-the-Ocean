@@ -22,9 +22,8 @@ li {
   list-style-type: none;
   text-align: start;
 }
-/*
-  CSS variables
-*/
+
+/*################   CSS variables  ################*/
 :root {
   --gap: 100px;
   --color-accent: #004eb9;
@@ -35,9 +34,7 @@ li {
   Typo
 */
 
-/*
-  Layouts
-*/
+/*################ Layout ################*/
 .l_wrapper {
   max-width: 1280px;
   margin: 0 auto; /* center */
@@ -49,6 +46,7 @@ li {
 */
 body {
   color: white;
+  height: 100vh;
 }
 .sea {
   background-image: linear-gradient(
@@ -63,25 +61,51 @@ body {
   );
 
   min-height: 100vh;
-  z-index: 200;
+  z-index: 100;
 }
 
-.sea-title {
+/*################ sea-depth-menu ################*/
+.sea-nav {
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   position: sticky;
+  z-index: 80;
   top: 0;
+  padding-bottom: 10px;
+}
+.sea-title {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  padding: 20px 0;
-  z-index: 10;
 }
 
+.sea-depth-menu {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
 .sea-contents {
   padding: var(--gap) 0;
 }
+.sea-depth-menu li {
+  padding-inline: 0 1rem;
+  font-size: 1em;
+  font-weight: normal;
+}
+.sea-depth-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.sea-depth-menu li a:hover {
+  color: #db362d;
+  font-weight: bold;
+}
 
+/*################ sea-contents ################*/
 .chart {
   position: relative;
 }
@@ -163,7 +187,7 @@ body {
   border-radius: 50%;
   margin-inline-start: -1rem; /* position for the mark */
   border: var(--border-width) solid var(--color-accent);
-  z-index: 200;
+  z-index: 100;
 }
 
 .card-image {
@@ -192,7 +216,6 @@ body {
   height: 150px;
   margin: 0 40px;
   transform: translateY(-30%);
-  z-index: 0;
 }
 
 .hide {
@@ -202,9 +225,20 @@ body {
 .dots .read-more-btn,
 .read-more-btn {
   font-family: 'Caveat', cursive;
-  color: #b9170e;
+  color: #db362d;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+@media (max-width: 1020px) {
+  .sea-title {
+    font-size: 1.8rem;
+    padding: 18px 0;
+  }
+  .container-card.image_small .card-image {
+    height: 100px;
+    margin: 0 30px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -251,6 +285,11 @@ body {
   .sea-title {
     font-size: 1.7rem;
   }
+  .sea-depth-menu li {
+    padding: 0;
+    font-size: 0.7em;
+  }
+
   .item-subtitle {
     font-size: 1rem;
   }

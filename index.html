@@ -17,8 +17,7 @@
       <input type="checkbox" id="navToggle" class="navToggle" />
       <nav>
         <ul>
-          <li><a class="active" id="active">Home</a></li>
-          <li><a>Ocean</a></li>
+          <li><a class="active">Ocean</a></li>
           <li><a>Space</a></li>
           <li><a class="btn">Contact</a></li>
         </ul>
@@ -36,7 +35,15 @@
       <img src="/images/islandRight.png" id="islandsRight" alt="" />
     </section>
     <section class="sea" id="sec">
-      <h1 class="sea-title">Layers of the Ocean</h1>
+      <div class="sea-nav">
+        <h1 class="sea-title">Layers of the Ocean</h1>
+        <ul class="sea-depth-menu">
+          <li><a href="#200m">200m</a></li>
+          <li><a href="#1000m">1000m</a></li>
+          <li><a href="#4000m">4000m</a></li>
+          <li><a href="#11000m">11000m</a></li>
+        </ul>
+      </div>
       <main class="sea-contents">
         <div class="l_wrapper">
           <ol class="chart">
@@ -46,7 +53,7 @@
               <div class="item-container">
                 <div class="container-card image_small">
                   <div class="card">
-                    <h3 class="card-title">Seahorse</h3>
+                    <h3 class="card-title" id="200m">Seahorse</h3>
                     <p class="card-content">
                       Seahorses range in size from 1.5 to 35.5 cm (5⁄8 to 14
                       in). They are named for their equine appearance, with bent
@@ -232,7 +239,7 @@
               <div class="item-container">
                 <div class="container-card image_small">
                   <div class="card">
-                    <h3 class="card-title">Crab</h3>
+                    <h3 class="card-title" id="1000m">Crab</h3>
                     <p class="card-content">
                       Crabs are generally covered with a thick exoskeleton,
                       composed primarily of highly mineralized chitin, and armed
@@ -354,7 +361,7 @@
                     alt="wolf-eel"
                   />
                 </div>
-                <h2 id="1000m" class="item-subtitle">
+                <h2 class="item-subtitle">
                   1000 m <br />
                   Mesopelagic (Twilight) Zone
                 </h2>
@@ -367,7 +374,7 @@
               <div class="item-container">
                 <div class="container-card image_small">
                   <div class="card">
-                    <h3 class="card-title">Blobfish</h3>
+                    <h3 class="card-title" id="4000m">Blobfish</h3>
                     <p class="card-content">
                       Psychrolutes marcidus, the smooth-head blobfish, also
                       known simply as blobfish, is a deep-sea fish of the family
@@ -464,7 +471,7 @@
                   />
                 </div>
                 <h2 class="item-subtitle">
-                  6000 m <br />
+                  4000 m <br />
                   Bathypelagic (Midnight) Zone
                 </h2>
               </div>
@@ -476,7 +483,7 @@
               <div class="item-container">
                 <div class="container-card image_small">
                   <div class="card">
-                    <h3 class="card-title">Shrimp</h3>
+                    <h3 class="card-title" id="6000m">Shrimp</h3>
                     <p class="card-content">
                       Shrimp are crustaceans (a form of shellfish) with
                       elongated bodies and a primarily swimming mode of
@@ -586,7 +593,7 @@
               <div class="item-container">
                 <div class="container-card image_small">
                   <div class="card">
-                    <h3 class="card-title">Starfish</h3>
+                    <h3 class="card-title" id="11000m">Starfish</h3>
                     <p class="card-content">
                       Starfish or sea stars are star-shaped echinoderms
                       belonging to the class Asteroidea (/ˌæstəˈrɔɪdiə/). Common
