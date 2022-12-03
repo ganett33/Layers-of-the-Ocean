@@ -23,13 +23,6 @@ window.addEventListener('scroll', function () {
   btn.style.marginTop = value * 0.5 + 'px';
 });
 
-// remove active class in nav ul li
-const w = window.innerWidth;
-const activeClass = document.getElementById('active');
-if (w <= window.screen.width) {
-  activeClass.classList.remove('active');
-}
-
 // read more function
 const NUMCHAR = 500;
 const contents = document.querySelectorAll('.card-content');

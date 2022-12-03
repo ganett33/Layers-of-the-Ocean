@@ -264,11 +264,12 @@ nav .btn:hover {
     z-index: 130;
   }
 
-  nav ul li a:hover {
+  nav ul li a:hover,
+  nav ul li a.active {
     background: #fff;
     color: #5288ff;
+    border-radius: 10px;
   }
-
   nav .btn {
     background-color: #6dd0f3;
     color: #fff;
